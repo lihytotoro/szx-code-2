@@ -1,0 +1,12 @@
+python parse_for_cwe-apr_0430.py \
+    --model_dir /home/lihaoyu/szx/models/codellama/CodeLlama-7b-hf \
+    --tokenizer_dir /home/lihaoyu/szx/models/codellama/CodeLlama-7b-hf \
+    --max_input_len 2048 \
+    --model_type codellama \
+    --raw_data_path /data/public/multimodal/lihaoyu/szx/datasets/java-juliet/src/parsed_dataset/src/juliet-java_all_testcases.parquet \
+    --input_form comment_1 \
+    --save_output_dir /data/public/multimodal/lihaoyu/szx/datasets/java-juliet/src/parsed_dataset \
+    --output_form jsonl \
+    --task_name cwe-apr \
+    --split_ratio 0.95 \
+    --cwe_metadata_path /data/public/multimodal/lihaoyu/szx/datasets/java-juliet/src/metadata/all_cwe_metadata.csv
